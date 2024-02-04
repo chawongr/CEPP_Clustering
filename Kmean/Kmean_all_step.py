@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.metrics import silhouette_score
 
 # Generate complex blobs data
-X, _ = make_blobs(n_samples=500, cluster_std=5.0)
+X, _ = make_blobs(n_samples=500, cluster_std=3.0, random_state=42)
 
 class CustomKMeans:
     def __init__(self, n_clusters, max_iter=100, tol=1e-4):

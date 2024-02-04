@@ -5,7 +5,9 @@ from sklearn.metrics import silhouette_score
 import numpy as np
 
 # สร้างข้อมูลจุด (blobs) ที่ซับซ้อนมากขึ้น
-X, _ = make_blobs(n_samples=500, cluster_std=3.0,random_state=40)
+# X, _ = make_blobs(n_samples=500, cluster_std=3.0,random_state=40)
+X, _ = make_blobs(n_samples=500, cluster_std=3.0, random_state=42)
+
 
 # ทดลองใช้ KMeans แบ่งกลุ่มข้อมูลด้วยจำนวนกลุ่มที่เปลี่ยนไป
 min_clusters, max_clusters = 2, 8
