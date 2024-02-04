@@ -5,7 +5,9 @@ from sklearn.cluster import AffinityPropagation
 from itertools import cycle
 
 # Generate sample data without specifying cluster centers
-X, _ = make_blobs(n_samples=500, centers=5, cluster_std=0.8, random_state=42)
+# X, _ = make_blobs(n_samples=500, centers=5, cluster_std=0.8, random_state=42)
+centers = [[1, 1], [-1, -1], [1, -1]]
+X, labels_true = make_blobs(n_samples=10, centers=centers, cluster_std=0.5, random_state=42)
 
 # Perform Affinity Propagation clustering with different preferences
 preferences = [-50, -30, -10, 0, 10]  # Example preference values
